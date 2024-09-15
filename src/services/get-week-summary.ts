@@ -80,6 +80,7 @@ export async function getWeekSummary() {
             JSON_OBJECT_AGG(
                 ${goalsCompletedByWeekDay.completedAtDate},
                 ${goalsCompletedByWeekDay.completions}
+                ORDER BY ${goalsCompletedByWeekDay.completedAtDate} DESC
             )
         `
     })
